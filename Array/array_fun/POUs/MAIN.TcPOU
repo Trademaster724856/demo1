@@ -7,7 +7,8 @@ MyArray : ARRAY[1..100] OF MyStructure;  // Array of 100 structures
     i : INT;  // Loop index
 	binputbools AT %I*:ARRAY [1..4] OF BOOL;
 	boutputbools AT %Q*:ARRAY [1..4]OF BOOL;
-	d:bool;
+	d:BOOL;
+	h:int;
 	
 END_VAR
 ]]></Declaration>
@@ -17,7 +18,7 @@ END_VAR
 
 FOR i := 1 TO 100 DO
     MyArray[i].Var1 := i;             // Assign serial number 1 to 100 to Var1
-    MyArray[i].Var2 := 10.5;          // Set constant value for Var2
+    MyArray[i].Var2 := 105.9;          // Set constant value for Var2
     MyArray[i].Var3 := TRUE;          // Set constant value for Var3
     MyArray[i].Var4 := T#1s;          // Set constant time value for Var4
     MyArray[i].Var5 := 'Serial #' ;  // Set a unique string for each structure

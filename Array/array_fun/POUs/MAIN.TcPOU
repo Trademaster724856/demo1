@@ -7,11 +7,15 @@ MyArray : ARRAY[1..100] OF MyStructure;  // Array of 100 structures
     i : INT;  // Loop index
 	binputbools AT %I*:ARRAY [1..4] OF BOOL;
 	boutputbools AT %Q*:ARRAY [1..4]OF BOOL;
+	d:bool;
 	
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[FOR i := 1 TO 100 DO
+      <ST><![CDATA[
+
+
+FOR i := 1 TO 100 DO
     MyArray[i].Var1 := i;             // Assign serial number 1 to 100 to Var1
     MyArray[i].Var2 := 10.5;          // Set constant value for Var2
     MyArray[i].Var3 := TRUE;          // Set constant value for Var3
@@ -20,6 +24,7 @@ END_VAR
 END_FOR]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
+      <LineId Id="22" Count="2" />
       <LineId Id="8" Count="5" />
       <LineId Id="2" Count="0" />
     </LineIds>
